@@ -8,7 +8,13 @@ function App() {
   
   return (
       <div className="App">
-        <h1><Link to="/" className='logo'>GitFinder</Link></h1>
+        <span>
+          <h1><Link to="/" className='logo'>GitFinder</Link></h1>
+          <a href="https://github.com/panelka2/GitFinder" target="_blank" rel="noreferrer">
+          <img src="/git_icon.svg" alt="Git Icon" className="icon" />
+        </a>
+        </span>
+        
         <Routes>
           <Route path="/" element={<Main/>}/>
           <Route path={REPO_PAGE_ROUTE} element={<Repo/>}/>
