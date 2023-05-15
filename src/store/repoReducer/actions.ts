@@ -1,27 +1,24 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { IGit, RepoLanguages } from "../../types/IGit";
-import { generatePath } from "react-router-dom";
 
 const API_URL = 'https://api.github.com/repos/:owner/:name'
 
 export const getRepo = createAsyncThunk(
-    'git/getRepo',
-    async ({ owner, name }: { owner: string | undefined; name: string | undefined}) => {
-        const response = await axios.get<IGit>(
-          generatePath(API_URL,{owner:owner || null,name: name || null}),
-        )
-    return response.data
-    }
+  'git/getRepo',
+  async ({ owner, name }: { owner: string | undefined; name: string | undefined }) => {
+    const url = API_URL.replace(':owner', owner || '').replace(':name', name || '');
+    const response = await axios.get<IGit>(url);
+    return response.data;
+  }
 );
 
 export const getRepoLanguages = createAsyncThunk(
-    'git/getRepoLanguages',
-    async ({ owner, name }: { owner: string | undefined; name: string | undefined }) => {
-      const response = await axios.get<RepoLanguages>(
-        `${generatePath(API_URL,{owner:owner || null,name: name || null})}/languages`
-        );
-      return response.data;
-    }
-  );
+  'git/getRepoLanguages',
+  async ({ owner, name }: { owner: string | undefined; name: string | undefined }) => {
+    const url = `${API_URL.replace(':owner', owner || '').replace(':name', name || '')}/languages`;
+    const response = await axios.get<RepoLanguages>(url);
+    return response.data;
+  }
+);
   
