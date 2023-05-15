@@ -8,7 +8,7 @@ function App() {
   
   return (
       <div className="App">
-        <span>
+        <span className='header'>
           <h1><Link to="/" className='logo'>GitFinder</Link></h1>
           <a href="https://github.com/panelka2/GitFinder" target="_blank" rel="noreferrer">
           <img src="/git_icon.svg" alt="Git Icon" className="icon" />

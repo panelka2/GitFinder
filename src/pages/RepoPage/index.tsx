@@ -68,14 +68,14 @@ export const Repo = () => {
                 </a>
               </h2>
               <h4>
-                by - 
+                by -  
                 <a 
                   target="_blank"
                   rel="noreferrer"
                   href={repo.owner.html_url} 
                   className={styles.link}
                   >
-                 {owner}{" "}
+                  {" "}{owner}
                 </a>
               </h4>
             </div>
