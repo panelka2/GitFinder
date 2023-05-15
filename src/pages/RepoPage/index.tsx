@@ -37,6 +37,7 @@ export const Repo = () => {
     options
   );
   const OWNER_URL = repo.owner?.html_url
+  const OWNER_IMG_URL = repo.owner?.avatar_url
 
   return (
     <div className={styles.block_all_page}>
@@ -82,7 +83,7 @@ export const Repo = () => {
             </div>
             <img
               className={styles.image}
-              src={repo.owner.avatar_url}
+              src={OWNER_IMG_URL}
               alt="user avatar"
             ></img>
           </div>
