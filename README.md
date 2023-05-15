@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Тестовое задание - Frontend Developer
+Необходимо используя Github Search API создать React приложение, которое состоит из двух страниц:
+## Главная страница – список репозиториев с возможностью поиска и страницами
+Карточка репозитория – страница с детальной информацией по репозиторию
+Главная страница
+Ключевые элементы страницы:
+- Поле для поиска репозиториев
+- Список репозиториев
+- Paginatе – список страниц
+При введении текста в Поле для поиска, должен происходить поиск по названию среди всех репозиториев Github и выводиться его результат в Список репозиториев ниже.
+Если в поле пустое, то показывается список репозиториев текущего пользователя.
+Примерная структура элементов списка:
+Название репозитория - количество звёзд на github - дата последнего коммита - ссылка на Github
+Внизу страницы есть Paginate вида [1, 2, 3, 4, 5]. Не показывать больше 10 страниц.
+Выбранная страница в Paginate должна отличаться по стилю от всех остальных.
+При перезагрузке страницы состояние выбранных фильтров (поиска и страницы) должно сохраняться и использоваться для первоначального запроса.
+Поиск должен происходить на стороне API.
+При клике на название репозитория происходит переход на Карточку репозитория.
+## Карточка репозитория
+Карточка должна иметь следующую структуру:
+- Название репозитория - кол-во звёзд на github - дата последнего коммита
+- Фото владельца репозитория, если есть - Nickname владельца репозитория с ссылкой на него
+- Список используемых языков в репозитории
+- Краткое описание репозитория
+## Требования
+- Основные технологии - (Vite/Webpack), Typescript, React
+- Использовать стейт-менеджер: Redux(toolkit / Rtk query). Данные должны храниться в стейт-менеджере.
+- UI библиотеки использовать нельзя, все нужно сверстать самостоятельно
+- Структура приложения должна быть с расчетом на будущий рост
+В остальном выбирайте любые инструменты для выполнения задания. Главное, чтобы вашим приложением можно было пользоваться в рамках описанных сценариев. Желательно сделать адаптивную верстку.
+### Результатом работы должна быть ссылка на ваш личный репозиторий. Желательно, чтобы имелась и ссылка на работающее приложение.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
