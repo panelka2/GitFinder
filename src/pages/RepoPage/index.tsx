@@ -36,6 +36,7 @@ export const Repo = () => {
     "en-US",
     options
   );
+  const OWNER_URL = repo.owner?.html_url
 
   return (
     <div className={styles.block_all_page}>
@@ -72,7 +73,7 @@ export const Repo = () => {
                 <a 
                   target="_blank"
                   rel="noreferrer"
-                  href={repo.owner.html_url} 
+                  href={OWNER_URL} 
                   className={styles.link}
                   >
                  {owner}{" "}
