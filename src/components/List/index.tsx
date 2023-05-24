@@ -25,7 +25,7 @@ export const List = () => {
   }, [currentPage, items]);
   
   if (isLoading) {
-    return <div className={styles.parent_message}><p className={styles.message}>Sarching...</p></div>
+    return <div className={styles.parent_message}><p className={styles.message}>Searching...</p></div>
   }
   if (error === "Request failed with status code 422") {
     return <div className={styles.parent_message}><p className={styles.message}>Type something &uarr;</p></div>

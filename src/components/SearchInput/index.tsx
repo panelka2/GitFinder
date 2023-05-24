@@ -26,7 +26,7 @@ export const SearchInput = () => {
     <div className={styles.search_block}>
       <label>
         Search:
-        <input className={styles.input} type="text" value={repoName} onChange={handleInputChange} />
+        <input className={styles.input} type="text" placeholder="Search" value={repoName} onChange={handleInputChange} />
       </label> 
     </div>
   );

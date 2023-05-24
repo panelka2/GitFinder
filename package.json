@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.5",
     "@types/lodash": "^4.14.194",
     "css-loader": "^6.7.3",
     "style-loader": "^3.3.2"
